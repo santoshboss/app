@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: dummy-container
-        image: IMAGE_PLACEHOLDER # will be replaced in buildspec
+        image: 585768171991.dkr.ecr.us-west-2.amazonaws.com/dummy-eks-app
         ports:
         - containerPort: 80
