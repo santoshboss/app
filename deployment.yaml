@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-app
+  labels:
+    app: dummy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy
+  template:
+    metadata:
+      labels:
+        app: dummy
+    spec:
+      containers:
+      - name: dummy-container
+        image: IMAGE_PLACEHOLDER # will be replaced in buildspec
+        ports:
+        - containerPort: 80
